@@ -1,1 +1,2 @@
-# hneil9.github.io
+# About Me
+As a highly motivated, talented and committed IT professional looking for opportunities to demonstrate my abilities, knowledge and skills. I am looking for opportunities to grown in the IT field and become a master in it. I’m always interested in hearing from former acquaintances or new acquaintances so feel free to contact me if you’d like to connect.
