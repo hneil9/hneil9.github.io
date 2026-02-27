@@ -10,14 +10,66 @@ body {
   color: #e5e7eb;
 }
 
+.site-header {
+  background: #020617; /* same as .page or slightly lighter/darker if you prefer */
+  border-bottom: 1px solid #1f2937;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-weight: 600;
+  font-size: 16px;
+  color: #f9fafb;
+  text-decoration: none;
+}
+
+.nav-brand:hover {
+  color: #38bdf8;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+/* add top margin so content doesn’t hide behind sticky header */
 .page {
+  margin: 24px auto;
+}
+
+
+/* .page {
   max-width: 900px;
   margin: 24px auto;
   background: #000000;
   padding: 32px 40px;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.7);
   border-radius: 8px;
-}
+} */
 
 h1,
 h2,
