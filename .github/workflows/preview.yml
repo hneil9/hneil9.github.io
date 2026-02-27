@@ -24,12 +24,14 @@ jobs:
                   npm install
                   npm run build
 
-            - name: Deploy preview
+            - name: Deploy PR preview
+              id: preview
               uses: rossjrw/pr-preview-action@v1
               with:
-                  source-dir: ./build/
-                  preview-branch: gh-pages
-                  qr-code: true
+                source-dir: ./
+                preview-branch: gh-pages
+                action: auto
+                qr-code: true
 
             - name: Comment Preview URL
               if: ${{ steps.preview.outputs.preview-url }}
