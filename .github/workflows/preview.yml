@@ -30,3 +30,17 @@ jobs:
                   source-dir: ./build/
                   preview-branch: gh-pages
                   qr-code: true
+
+            - name: Comment Preview URL
+              if: ${{ steps.preview.outputs.preview-url }}
+              uses: actions/github-script@v7
+              with:
+                script: |
+                  const url = `${{ steps.preview.outputs.preview-url }}`;
+                  const body = `🚀 PR Preview is ready: ${url}`;
+                  await github.rest.issues.createComment({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    issue_number: context.issue.number,
+                    body
+                  });
