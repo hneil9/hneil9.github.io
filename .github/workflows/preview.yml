@@ -11,6 +11,10 @@ on:
 
 concurrency: preview-${{ github.ref }}
 
+permissions:
+  contents: write  # Required to push to gh-pages branch
+  pull-requests: write  # Required to comment on pull requests
+
 jobs:
     deploy-preview:
         runs-on: ubuntu-latest
@@ -46,3 +50,5 @@ jobs:
                     issue_number: context.issue.number,
                     body
                   });
+
+                  
